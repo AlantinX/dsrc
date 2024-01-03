@@ -561,3 +561,4 @@ resistance_incapacitation	ALL	attributes	1	8050			modifier for incapacitation
 bm_incubator_dps_armor	ALL	beastmaster	1	8060			Ability Acquisition Bonus
 bm_mutation_chance_increase	ALL	beastmaster	1	8070			Ability Acquisition Bonus
 incubation_time_reduction	ALL	beastmaster	1	8080			Ability Acquisition Bonus
+fs_inspired_action_chance	force_sensitive_1a	force_sensitive	1	9001			Jedi Inspiration Chance

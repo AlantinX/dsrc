@@ -264,7 +264,13 @@ public class combat_actions extends script.systems.combat.combat_base {
         }
         return SCRIPT_CONTINUE;
     }
-
+    public int forceRunQuick(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction ("forceRunQuick", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+    
     public int bh_detect_camouflage_1(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
         if (!stealth.canDetectCamouflage(self) || !combatStandardAction("bh_detect_camouflage_1", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;
@@ -1354,6 +1360,7 @@ public class combat_actions extends script.systems.combat.combat_base {
         if (!combatStandardAction("fs_saber_reflect_buff", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;
         }
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 
@@ -1531,6 +1538,7 @@ public class combat_actions extends script.systems.combat.combat_base {
         }
         float cooldownTimeMod = getEnhancedSkillStatisticModifierUncapped(self, "expertise_cooldown_line_fs_ae_dm_cc") / 10;
         setCommandTimerValue(self, TIMER_COOLDOWN, baseCooldownTime - cooldownTimeMod);
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 
@@ -1601,6 +1609,7 @@ public class combat_actions extends script.systems.combat.combat_base {
         if (successfulFastAttack(self, "fs_powers", "fury_fly")) {
             setCommandTimerValue(self, TIMER_COOLDOWN, 0.0f);
         }
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 
@@ -1609,6 +1618,50 @@ public class combat_actions extends script.systems.combat.combat_base {
             return SCRIPT_OVERRIDE;
         }
         if (!combatStandardAction("fs_buff_ca_1", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
+    public int fs_buff_movmed(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("fs_buff_movmed", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+    
+    public int fs_buff_strength(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("fs_buff_strength", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
+    public int fs_buff_fury(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("fs_buff_fury", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        fs_doInspiredAction(self);
+        return SCRIPT_CONTINUE;
+    }    
+
+    public int fs_buff_soresu(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("fs_buff_soresu", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
+    public int fs_buff_shield(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("fs_buff_shield", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        fs_doInspiredAction(self);
+        return SCRIPT_CONTINUE;
+    }
+
+    public int fs_buff_inspire(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("fs_buff_inspire", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;
         }
         return SCRIPT_CONTINUE;
@@ -1733,6 +1786,7 @@ public class combat_actions extends script.systems.combat.combat_base {
             return SCRIPT_OVERRIDE;
         }
         setCommandTimerValue(self, TIMER_COOLDOWN, baseCooldownTime);
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 
@@ -1824,6 +1878,7 @@ public class combat_actions extends script.systems.combat.combat_base {
         }
         float cooldownTimeMod = getEnhancedSkillStatisticModifierUncapped(self, "expertise_cooldown_line_fs_dm") / 10;
         setCommandTimerValue(self, TIMER_COOLDOWN, baseCooldownTime - cooldownTimeMod);
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 
@@ -1915,6 +1970,7 @@ public class combat_actions extends script.systems.combat.combat_base {
         }
         float cooldownTimeMod = getEnhancedSkillStatisticModifierUncapped(self, "expertise_cooldown_line_fs_sweep") / 10;
         setCommandTimerValue(self, TIMER_COOLDOWN, baseCooldownTime - cooldownTimeMod);
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 
@@ -2003,6 +2059,7 @@ public class combat_actions extends script.systems.combat.combat_base {
         if (!combatStandardAction("fs_dm_cc_6", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;
         }
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 
@@ -2130,6 +2187,68 @@ public class combat_actions extends script.systems.combat.combat_base {
             return SCRIPT_OVERRIDE;
         }
         if (!combatStandardAction("fs_sh_3", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        fs_doInspiredAction(self);
+        return SCRIPT_CONTINUE;
+    }
+
+    public int fs_heal_1(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!healing.isDamaged(self)) {
+            sendSystemMessage(self, new string_id("healing", "no_damage_to_heal_self"));
+            return SCRIPT_OVERRIDE;
+        }
+        if (!combatStandardAction("fs_heal_1", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        fs_doInspiredAction(self);
+        return SCRIPT_CONTINUE;
+    }
+
+    public int fs_heal_other_1(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (vehicle.isVehicle(target) || !isInAttackRange(self, target, "fs_heal_other_1", false)) {
+            target = self;
+        }
+        if (!combatStandardAction("fs_heal_other_1", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
+        public int fs_heal_other_2(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (vehicle.isVehicle(target) || !isInAttackRange(self, target, "fs_heal_other_2", false)) {
+            target = self;
+        }
+        if (!combatStandardAction("fs_heal_other_1", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
+    public int fs_heal_other_3(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (vehicle.isVehicle(target) || !isInAttackRange(self, target, "fs_heal_other_3", false)) {
+            target = self;
+        }
+        if (!combatStandardAction("fs_heal_other_3", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        fs_doInspiredAction(self);
+        return SCRIPT_CONTINUE;
+    }
+
+    public int fs_heal_other_4(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (vehicle.isVehicle(target) || !isInAttackRange(self, target, "fs_heal_other_4", false)) {
+            target = self;
+        }
+        if (!combatStandardAction("fs_heal_other_4", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        fs_doInspiredAction(self);
+        return SCRIPT_CONTINUE;
+    }
+
+    public int fs_ae_heal_1(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("fs_ae_heal_1", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;
         }
         return SCRIPT_CONTINUE;
@@ -4976,7 +5095,7 @@ public class combat_actions extends script.systems.combat.combat_base {
         doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
-
+    
     public void doInspiredAction(obj_id officer) throws InterruptedException {
         int bonusChance = getEnhancedSkillStatisticModifierUncapped(officer, "of_inspired_action_chance");
         if (bonusChance > 0) {
@@ -4989,6 +5108,23 @@ public class combat_actions extends script.systems.combat.combat_base {
                 pp = prose.setStringId(pp, new string_id("set_bonus", "inspired_action_fly_cbspam"));
                 pp = prose.setTT(pp, officer);
                 sendCombatSpamMessageProse(officer, pp, COMBAT_RESULT_GENERIC);
+            }
+        }
+        return;
+    }
+
+    public void fs_doInspiredAction(obj_id force_sensitive) throws InterruptedException {
+        int bonusChance = getEnhancedSkillStatisticModifierUncapped(force_sensitive, "fs_inspired_action_chance");
+        if (bonusChance > 0) {
+            int roll = rand(1, 99);
+            int total = roll + bonusChance;
+            if (total > 99) {
+                buff.applyBuff(force_sensitive, force_sensitive, "fs_buff_inspire");
+                showFlyText(force_sensitive, new string_id("set_bonus", "inspired_action_fly"), 2, colors.LEMONCHIFFON);
+                prose_package pp = new prose_package();
+                pp = prose.setStringId(pp, new string_id("set_bonus", "inspired_action_fly_cbspam"));
+                pp = prose.setTT(pp, force_sensitive);
+                sendCombatSpamMessageProse(force_sensitive, pp, COMBAT_RESULT_GENERIC);
             }
         }
         return;
@@ -10080,6 +10216,7 @@ public class combat_actions extends script.systems.combat.combat_base {
             return SCRIPT_OVERRIDE;
         }
         combat.dsFsTaunt(self, target);
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 
@@ -11291,6 +11428,7 @@ public class combat_actions extends script.systems.combat.combat_base {
         if (!combatStandardAction("fs_drain_5", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;
         }
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 
@@ -12464,6 +12602,7 @@ public class combat_actions extends script.systems.combat.combat_base {
         if (!combatStandardAction("fs_saber_intercept_1", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;
         }
+        fs_doInspiredAction(self);
         return SCRIPT_CONTINUE;
     }
 

@@ -433,6 +433,7 @@ no_break_invis	noBreakInvis	N_A
 of_dot_acid	dot	acid	
 of_dot_fire	dot	fire	
 of_inspired_action_chance	skill	of_inspired_action_chance	
+fs_inspired_action_chance		fs_inspired_action_chance	
 offense	skill	offense	
 on_attack_remove	onAttackRemove	on_attack_remove	
 onehandmelee_accuracy	skill	onehandmelee_accuracy	

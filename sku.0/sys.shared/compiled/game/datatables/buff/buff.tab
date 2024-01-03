@@ -841,7 +841,14 @@ fs_buff_def_1_3	fsStance	fsDefStance		3	command.fs_buff_def_1	-1	expertise_stanc
 fs_buff_def_1_4	fsStance	fsDefStance		4	command.fs_buff_def_1	-1	expertise_stance	0	private_taunt_bonus	20		0		0		0	STATE_NONE	none			1	0	appearance/pt_force_resist_disease.prt	0	1	1	0	1	1	0	1	1	1
 fs_buff_def_1_5	fsStance	fsDefStance		5	command.fs_buff_def_1	-1	expertise_stance	0	private_taunt_bonus	20		0		0		0	STATE_NONE	none			1	0	appearance/pt_force_resist_states.prt	0	1	1	0	1	1	0	1	1	1
 fs_buff_def_1_6	fsStance	fsDefStance		6	command.fs_buff_def_1	-1	expertise_stance	0	private_taunt_bonus	20		0		0		0	STATE_NONE	none			1	0	appearance/pt_force_resist_poison.prt	0	1	1	0	1	1	0	1	1	1
+fs_buff_movmed_1	jediBuff1			5	command.fs_buff_movmed	6000	stamina_modified	1000	damage_decrease_percentage	30		0		0		0	STATE_NONE	none	appearance/pt_force_channel_force.prt		1	0	appearance/pt_makashi_focus.prt	0	1	1	0	1	1	0	1	1	1
+fs_buff_strength_1	jediBuff2			5	command.fs_path_anticipate_aggression	6000	strength_modified	400	expertise_damage_all	40		0		0		0	STATE_NONE	none	appearance/pt_force_meditate.prt		1	0	appearance/pt_centerofbeing.prt	0	1	1	0	1	1	0	1	1	1
+fs_buff_fury_1	jediBuff3			5	command.fs_general_exacting_strikes	300	expertise_damage_all	100	expertise_action_all	-100	combat_multiply_damage_taken	15	expertise_healing_all	50		0	STATE_NONE	none	appearance/pt_force_channel_force.prt		1	0	appearance/pt_ataru_focus.prt	0	1	1	0	10	1	0	1	1	1
+fs_buff_soresu_4	jediBuff4			5	command.fs_buff_soresu	6000	healthPercent	200	expertise_innate_protection_all	1000	expertise_healing_all	25		0		0	STATE_NONE	none	appearance/pt_force_meditate.prt		1	0	appearance/pt_force_resist_states.prt	0	1	1	0	1	1	0	1	1	1
+fs_buff_shield_1	jediBuff5			5	command.bh_shields	15	damage_decrease_percentage	90		0		0		0			STATE_NONE	none	appearance/pt_ig88_droideka_shield.prt		1	0		1	1	1	0	1	1	0	1	1	1
+fs_buff_inspire_1	jediBuff6			5	command.fs_buff_inspire	25	expertise_action_all	10	healing_action	4735	fs_inspired_action_chance	15		0			STATE_NONE	none	appearance/pt_mote_green.prt		1	0		1	1	1	0	4	1	0	1	1	1
 fs_force_run	fs_force_run			1	command.forceRun	15	slope_move	5	movement	0	movement_resist_snare	100	movement_resist_root	100		0	STATE_NONE	none	clienteffect/pl_force_run.cef,appearance/pt_force_speed.prt		1	0		1	1	1	0	1	1	0	1	1	1
+fs_force_run_2	fs_force_run			1	command.forceRun	60	slope_move	5	movement	0	movement_resist_snare	100	movement_resist_root	100		0	STATE_NONE	none	clienteffect/pl_force_run.cef,appearance/pt_force_speed.prt		1	0		1	1	1	0	1	1	0	1	1	1
 fs_meditate_1	fs_meditate			1	jedi.channelForce	1800	expertise_evasion_chance	3	expertise_evasion_value	30	expertise_resource_quality_increase	2		0		0	STATE_NONE	none	appearance/pt_force_channel_force.prt		1	0		1	1	1	0	1	1	0	1	1	1
 fs_meditate_2	fs_meditate			1	jedi.saberDervish	1800	expertise_strikethrough_chance	3	combat_strikethrough_value	50	expertise_resource_quality_increase	2		0		0	STATE_NONE	none	appearance/pt_force_meditate.prt		1	0		1	1	1	0	1	1	0	1	1	1
 fs_meditate_3	fs_meditate			1	jedi.avoidIncapacitation	1800	expertise_critical_niche_all	3	strength_modified	85	expertise_resource_quality_increase	2		0		0	STATE_NONE	none	appearance/pt_force_channel_force.prt		1	0		1	1	1	0	1	1	0	1	1	1
@@ -851,6 +858,7 @@ fs_sh_0	fsCure			10	command.fs_sh	6	expertise_dot_immunity	5		0		0		0		0	STATE_N
 fs_sh_1	fsCure			20	command.fs_sh	10	expertise_dot_immunity	5		0		0		0		0	STATE_NONE	fs_dot_immunity_recourse			1	0		1	1	1	0	1	1	0	1	1	1
 fs_sh_2	fsCure			30	command.fs_sh	12	expertise_dot_immunity	5		0		0		0		0	STATE_NONE	fs_dot_immunity_recourse			1	0		1	1	1	0	1	1	0	1	1	1
 fs_sh_3	fsCure			40	command.fs_sh	14	expertise_dot_immunity	5		0		0		0		0	STATE_NONE	fs_dot_immunity_recourse			1	0		1	1	1	0	1	1	0	1	1	1
+fs_heal_1	fsHeal			60	command.fs_sh	14	expertise_dot_immunity	5		0		0		0		0	STATE_NONE	fs_dot_immunity_recourse	appearance/pt_force_channel_force.prt		1	0		1	1	1	0	1	1	0	1	1	1
 invis_fs_buff_invis_1	invisibility			4	command.fs_buff_invis	30	invis	0	movement	0		0		0		0	STATE_NONE	none			1	0		0	1	1	0	1	1	0	1	1	1
 saberBlock	saberBlock			1	command.saberBlock	20	expertise_saber_block	10		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
 fs_saber_reflect	fs_saber_reflect			1	command.fs_saber_reflect_buff	30	expertise_saber_block	10		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
