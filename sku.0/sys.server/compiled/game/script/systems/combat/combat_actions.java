@@ -1974,6 +1974,30 @@ public class combat_actions extends script.systems.combat.combat_base {
         return SCRIPT_CONTINUE;
     }
 
+    public int ForceWeaken(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("ForceWeaken", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
+    public int ForceFlash(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (vehicle.isVehicle(target) || !isInAttackRange(self, target, "ForceFlash", false)) {
+            target = self;
+        }
+        if (!combatStandardAction("ForceFlash", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
+    public int ForceNova(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("ForceNova", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
     public int fs_mind_trick_1(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
         if (!combatStandardAction("fs_mind_trick_1", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;
@@ -2249,6 +2273,13 @@ public class combat_actions extends script.systems.combat.combat_base {
 
     public int fs_ae_heal_1(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
         if (!combatStandardAction("fs_ae_heal_1", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
+        public int fs_one_with_force(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!combatStandardAction("fs_one_with_force", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;
         }
         return SCRIPT_CONTINUE;

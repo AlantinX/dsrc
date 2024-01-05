@@ -114,7 +114,7 @@ diseased	diseased			1	state.diseased	-1		0		0		0		0		0	STATE_NONE	none			1	1		0	
 onfire	onfire			1	state.onFire	-1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
 acid	acid			1	state.acid	-1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
 energy	energy			1	state.energy	-1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
- 	healOverTime			1	command.me_hot	-1		0		0		0		0		0	STATE_NONE	none			1	0		0	1	0	0	1	1	0	1	1	1
+healOverTime	healOverTime			1	command.me_hot	-1		0		0		0		0		0	STATE_NONE	none			1	0		0	1	0	0	1	1	0	1	1	1
 armorHinderanceMove	armorMove			1	buffs.armorHinderance	1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
 armorHinderanceAccuracy	armorAcc			1	buffs.armorHinderance	1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
 armorHinderanceFireRate	armorRof			1	buffs.armorHinderance	1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1

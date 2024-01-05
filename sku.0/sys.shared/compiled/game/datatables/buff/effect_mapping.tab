@@ -195,11 +195,11 @@ event_halloween_costume	costume	event_halloween_costume
 event_halloween_trick_cooldown	halloweenCooldown	event_halloween_trick_cooldown	
 exclude_self	excludeSelf	exclude_self	
 exclusive_proxy	exclusiveProxy		
-exclusive_proxy_of_vortex_root_1	exclusiveProxy	"of_vortex_root,of_vortex_bleed_1"	
-exclusive_proxy_of_vortex_root_2	exclusiveProxy	"of_vortex_root,of_vortex_bleed_2"	
-exclusive_proxy_of_vortex_root_3	exclusiveProxy	"of_vortex_root,of_vortex_bleed_3"	
-exclusive_proxy_of_vortex_root_4	exclusiveProxy	"of_vortex_root,of_vortex_bleed_4"	
-exclusive_proxy_of_vortex_root_5	exclusiveProxy	"of_vortex_root,of_vortex_bleed_5"	
+exclusive_proxy_of_vortex_root_1	exclusiveProxy	of_vortex_root,of_vortex_bleed_1	
+exclusive_proxy_of_vortex_root_2	exclusiveProxy	of_vortex_root,of_vortex_bleed_2	
+exclusive_proxy_of_vortex_root_3	exclusiveProxy	of_vortex_root,of_vortex_bleed_3	
+exclusive_proxy_of_vortex_root_4	exclusiveProxy	of_vortex_root,of_vortex_bleed_4	
+exclusive_proxy_of_vortex_root_5	exclusiveProxy	of_vortex_root,of_vortex_bleed_5	
 expertise_action_all	skill	expertise_action_all	
 expertise_action_line_co_grenade	skill	expertise_action_line_co_grenade	
 expertise_action_line_dm	skill	expertise_action_line_dm	
@@ -373,6 +373,9 @@ freeshot_case_strikethrough	skill	freeshot_case_strikethrough
 fs_choke_handler	fs_choke_handler	fs_choke_handler	
 fs_flurry_proc	fs_flurry_proc	fs_flurry_proc	
 fs_set_heroic_taunt_1	commandGrant	fs_set_heroic_taunt_1	
+fs_bonus_ae_heal_1	commandGrant	ForceNova	
+fs_bonus_heal_1	commandGrant	ForceFlash	
+fs_bonus_weaken_1	commandGrant	ForceWeaken	
 general_assembly	skill	general_assembly	
 general_experimentation	skill	general_experimentation	
 glancing_blow_vulnerable	skill	glancing_blow_vulnerable	
@@ -433,7 +436,7 @@ no_break_invis	noBreakInvis	N_A
 of_dot_acid	dot	acid	
 of_dot_fire	dot	fire	
 of_inspired_action_chance	skill	of_inspired_action_chance	
-fs_inspired_action_chance		fs_inspired_action_chance	
+fs_inspired_action_chance	skill	fs_inspired_action_chance	
 offense	skill	offense	
 on_attack_remove	onAttackRemove	on_attack_remove	
 onehandmelee_accuracy	skill	onehandmelee_accuracy	
@@ -500,7 +503,7 @@ rifle_speed	skill	rifle_speed
 saber_block	skill	saber_block	
 script_var	scriptVar	N_A	
 set_bonus_bh_utility_a_1	skill	set_bonus_bh_utility_a_1	
-set_bonus_bh_utility_a_2	skill	set_bonus_bh_utility_a_2	"IF THE NAME of your added effect doesn't start with X, Y or Z then this is the wrong place to put it."
+set_bonus_bh_utility_a_2	skill	set_bonus_bh_utility_a_2	IF THE NAME of your added effect doesn't start with X, Y or Z then this is the wrong place to put it.
 set_bonus_bh_utility_a_3	skill	set_bonus_bh_utility_a_3	
 setSpecialType_kun_chaos	setSpecialType	setSpecialType_kun_chaos	
 setSpecialType_kun_order	setSpecialType	setSpecialType_kun_order	
@@ -568,7 +571,7 @@ xp_bonus_ranger	xpBonus	ranger
 xp_bonus_scout	xpBonus	scout	
 xp_bonus_shipwright	xpBonus	shipwright	
 xp_bonus_tailor	xpBonus	tailor	
-xp_bonus_weaponsmith	xpBonus	weaponsmith	"IF THE NAME of your added effect doesn't start with X, Y or Z then this is the wrong place to put it."
+xp_bonus_weaponsmith	xpBonus	weaponsmith	IF THE NAME of your added effect doesn't start with X, Y or Z then this is the wrong place to put it.
 damage_immune	damageImmune	damage_immune	
 fs_choke_handler	fs_choke_handler	fs_choke_handler	
 jedi_statue_light_debuff_handler	jediStatueLightDebuff	jedi_statue_light_debuff_handler	
