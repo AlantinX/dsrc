@@ -407,7 +407,7 @@ holocron_4	holocron_4			4	jedi.forceCloak	6000	agility_modified	150	absorption_f
 holocron_5	holocron_5			5	jedi.forceCloak	6000	expertise_resource_quality_increase	60	jedi_saber_assembly	50	jedi_saber_experimentation	50	luck_modified	200		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
 holocron_6	holocron_6			6	jedi.forceCloak	6000	constitution_modified	200	agility_modified	200	strength_modified	200	precision_modified	200	luck_modified	200	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
 holocron_7	holocron_7			7	jedi.forceCloak	6000	expertise_healing_all	55	healthPercent	50	fs_bonus_heal_1	1	fs_bonus_ae_heal_1	1		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
-holocron_8	holocron_8			1	jedi.forceCloak	6000	expertise_damage_line_fs_ae_dm_cc	50	expertise_cooldown_line_fs_cc_crit	25	fs_bonus_weaken_1	1		0		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
+holocron_8	holocron_8			1	jedi.forceCloak	6000	fs_bonus_weaken_1	1	expertise_cooldown_line_fs_cc_crit	40		0		0		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
 proc_fire_attack	procBuff			5	buffs.genericBuff	180	proc_buff	1		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
 proc_fire_attack_1	procBuff			1	buffs.genericBuff	180	proc_buff	1		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
 npeHealthBuff	doctorHealth			1	buffs.genericBuff	180	constitution_modified	5		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
