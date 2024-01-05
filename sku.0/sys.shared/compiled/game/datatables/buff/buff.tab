@@ -114,7 +114,7 @@ diseased	diseased			1	state.diseased	-1		0		0		0		0		0	STATE_NONE	none			1	1		0	
 onfire	onfire			1	state.onFire	-1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
 acid	acid			1	state.acid	-1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
 energy	energy			1	state.energy	-1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
-healOverTime	healOverTime			1	command.me_hot	-1		0		0		0		0		0	STATE_NONE	none			1	0		0	1	0	0	1	1	0	1	1	1
+ 	healOverTime			1	command.me_hot	-1		0		0		0		0		0	STATE_NONE	none			1	0		0	1	0	0	1	1	0	1	1	1
 armorHinderanceMove	armorMove			1	buffs.armorHinderance	1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
 armorHinderanceAccuracy	armorAcc			1	buffs.armorHinderance	1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
 armorHinderanceFireRate	armorRof			1	buffs.armorHinderance	1		0		0		0		0		0	STATE_NONE	none			1	1		0	1	1	0	1	1	0	1	1	1
@@ -400,14 +400,14 @@ jediRegen_2	forceRegen			1	jedi.forceArmor	-1	jedi_force_power_regen	5		0		0		0	
 jediRegen_3	forceRegen			1	jedi.forceArmor	-1	jedi_force_power_regen	5		0		0		0		0	STATE_NONE	none			1	0		0	1	1	0	1	1	0	1	1	1
 jediRegen_4	forceRegen			1	jedi.forceArmor	-1	jedi_force_power_regen	5		0		0		0		0	STATE_NONE	none			1	0		0	1	1	0	1	1	0	1	1	1
 jediRegen_5	forceRegen			1	jedi.forceArmor	-1	jedi_force_power_regen	5		0		0		0		0	STATE_NONE	none			1	0		0	1	1	0	1	1	0	1	1	1
-holocron_1	holobuff			1	jedi.forceCloak	900	health	150		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
-holocron_2	holobuff			2	jedi.forceCloak	900	ranged_defense	50		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
-holocron_3	holobuff			3	jedi.forceCloak	900	melee_defense	50		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
-holocron_4	holobuff			4	jedi.forceCloak	900	stamina	150		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
-holocron_5	holobuff			5	jedi.forceCloak	900	willpower	150		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
-holocron_6	holobuff			6	jedi.forceCloak	900	constitution	150		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
-holocron_7	holobuff			7	jedi.forceCloak	900	resistance_fire	30	absorption_fire	15		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
-holocron_8	holobuff			8	jedi.forceCloak	35	constitutionPercent	75	staminaPercent	50		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
+holocron_1	holocron_1			1	jedi.forceCloak	120	healing_health	9000	healing_action	9000		0		0		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
+holocron_2	holocron_2			2	jedi.forceCloak	6000				0		0		0		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
+holocron_3	holocron_3			3	jedi.forceCloak	6000	expertise_damage_all	30	expertise_strikethrough_chance	10	precision_modified	150	expertise_critical_niche_all	15		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
+holocron_4	holocron_4			4	jedi.forceCloak	6000	agility_modified	150	absorption_fire	50	damage_decrease_percentage	25	expertise_parry	20		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
+holocron_5	holocron_5			5	jedi.forceCloak	6000	expertise_resource_quality_increase	60	jedi_saber_assembly	50	jedi_saber_experimentation	50	luck_modified	200		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
+holocron_6	holocron_6			6	jedi.forceCloak	6000	constitution_modified	200	agility_modified	200	strength_modified	200	precision_modified	200	luck_modified	200	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
+holocron_7	holocron_7			7	jedi.forceCloak	6000	expertise_healing_all	55	healthPercent	50	fs_bonus_heal_1	1	fs_bonus_ae_heal_1	1		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
+holocron_8	holocron_8			1	jedi.forceCloak	6000	expertise_damage_line_fs_ae_dm_cc	50	expertise_cooldown_line_fs_cc_crit	25	fs_bonus_weaken_1	1		0		0	STATE_NONE	none			1	0		1	0	1	0	1	1	0	1	1	1
 proc_fire_attack	procBuff			5	buffs.genericBuff	180	proc_buff	1		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
 proc_fire_attack_1	procBuff			1	buffs.genericBuff	180	proc_buff	1		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
 npeHealthBuff	doctorHealth			1	buffs.genericBuff	180	constitution_modified	5		0		0		0		0	STATE_NONE	none			1	0		1	1	1	0	1	1	0	1	1	1
@@ -891,6 +891,7 @@ fs_saber_shackle_1	fs_saber_shackle			1	command.fs_path_practiced_fluidity	-1	ex
 fs_saber_shackle_2	fs_saber_shackle			1	command.fs_path_practiced_fluidity	-1	expertise_buff_chance_line_fs_force_throw	50	expertise_buff_chance_fs_force_throw_root	4		0		0		0	STATE_NONE	none			0	0		0	1	0	0	1	1	0	1	1	1
 fs_saber_shackle_3	fs_saber_shackle			1	command.fs_path_practiced_fluidity	-1	expertise_buff_chance_line_fs_force_throw	75	expertise_buff_chance_fs_force_throw_root	6		0		0		0	STATE_NONE	none			0	0		0	1	0	0	1	1	0	1	1	1
 fs_saber_shackle_4	fs_saber_shackle			1	command.fs_path_practiced_fluidity	-1	expertise_buff_chance_line_fs_force_throw	100	expertise_buff_chance_fs_force_throw_root	8		0		0		0	STATE_NONE	none			0	0		0	1	0	0	1	1	0	1	1	1
+fs_bonus_weaken_1	fs_bonus_weaken			1	jedi.forceWeaken	20	critical_damage_vulnerability	25	combat_divide_damage_dealt	33	combat_multiply_damage_taken	50		0		0	STATE_NONE	none			1	1		1	1	0	0	1	1	0	1	0	1
 of_ae_dm_cc_1	snare			1	command.of_ae_dm_cc	10	movement	0		0		0		0		0	STATE_NONE	none			1	1		1	1	1	0	1	1	0	1	1	1
 of_ae_dm_cc_2	snare			2	command.of_ae_dm_cc	15	movement	0		0		0		0		0	STATE_NONE	none			1	1		1	1	1	0	1	1	0	1	1	1
 of_ae_dm_cc_3	snare			3	command.of_ae_dm_cc	20	movement	0		0		0		0		0	STATE_NONE	none			1	1		1	1	1	0	1	1	0	1	1	1
