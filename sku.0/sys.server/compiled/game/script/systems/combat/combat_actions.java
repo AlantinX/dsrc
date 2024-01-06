@@ -2345,6 +2345,22 @@ public class combat_actions extends script.systems.combat.combat_base {
         return SCRIPT_CONTINUE;
     }
 
+    public int fs_general_enhance(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!isIdValid(target) || !pvpCanHelp(self, target) || vehicle.isVehicle(target) || isDead(target)) {
+            target = self;
+        }
+        if (!buff.canApplyBuff(target, "fs_buff_group_1")) {
+            sendSystemMessage(self, new string_id("spam", "buff_wont_stack"));
+            sendCombatSpamMessage(self, new string_id("spam", "buff_wont_stack"), COMBAT_RESULT_GENERIC);
+            return SCRIPT_OVERRIDE;
+        }
+        boolean performed_buff = performMedicGroupBuff(self, target, "fs_general_enhance", params);
+        if (!performed_buff) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
     public int me_ae_heal_1(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
         if (!combatStandardAction("me_ae_heal_1", self, target, params, "", "")) {
             return SCRIPT_OVERRIDE;

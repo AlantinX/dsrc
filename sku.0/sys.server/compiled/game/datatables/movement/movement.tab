@@ -47,7 +47,7 @@ forceSuppression	root			1	1
 forceSuppression_1	root			1	1	
 stasis	root			1	1	
 fs_force_run	boost	125				
-fs_force_run_quick	boost	125				
+fs_force_run_2	boost	125				
 forceRun_1	boost	100				
 forceRun_2	boost	150				
 paralyze	root					
