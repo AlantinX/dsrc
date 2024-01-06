@@ -1,13 +1,13 @@
 name	skill_mods	attribute_bonus	objvars	color	buff_name	cool_down_group	reuse_time	required_level_for_effect	hide_buff_identity	client_effect	client_animation
 s[unique]	s	s	s	s	s	s	i	i	i[0]	s	s
-item_holocron_06_01				index_color_1=2	holocron_1	itemBuffClick	600			appearance/pt_heal_resist_states.prt	survey
-item_holocron_06_02				index_color_1=10	holocron_2	itemBuffClick	600			appearance/pt_heal_resist_states.prt	survey
-item_holocron_06_03				index_color_1=7	holocron_3	itemBuffClick	600			appearance/pt_heal_resist_states.prt	survey
-item_holocron_06_04				index_color_1=31	holocron_4	itemBuffClick	600			appearance/pt_heal_resist_states.prt	survey
-item_holocron_06_05				index_color_1=4	holocron_5	itemBuffClick	600			appearance/pt_heal_resist_states.prt	survey
-item_holocron_06_06				index_color_1=30	holocron_6	itemBuffClick	600			appearance/pt_heal_resist_states.prt	survey
-item_holocron_06_07				index_color_1=25	holocron_7	itemBuffClick	600			appearance/pt_heal_resist_states.prt	survey
-item_holocron_06_08				index_color_1=17	holocron_8	itemBuffClick	600			appearance/pt_heal_resist_states.prt	survey
+item_holocron_06_01				index_color_1=2	holocron_1	holocron_1	600			appearance/pt_heal_resist_states.prt	survey
+item_holocron_06_02				index_color_1=10	holocron_2	holocron_2	3600			appearance/pt_heal_resist_states.prt	survey
+item_holocron_06_03				index_color_1=7	holocron_3	holocron_3	600			appearance/pt_heal_resist_states.prt	survey
+item_holocron_06_04				index_color_1=31	holocron_4	holocron_4	600			appearance/pt_heal_resist_states.prt	survey
+item_holocron_06_05				index_color_1=4	holocron_5	holocron_5	600			appearance/pt_heal_resist_states.prt	survey
+item_holocron_06_06				index_color_1=30	holocron_6	holocron_6	600			appearance/pt_heal_resist_states.prt	survey
+item_holocron_06_07				index_color_1=25	holocron_7	holocron_7	600			appearance/pt_heal_resist_states.prt	survey
+item_holocron_06_08				index_color_1=17	holocron_8	holocron_8	600			appearance/pt_heal_resist_states.prt	survey
 item_ultra_battery_10_01				index_color_1=12	proc_fire_attack	itemBuffClick_1	5	45		appearance/pt_heal_resist_states.prt	udaman
 item_jedi_robe_04_01	constitution_modified=50,precision_modified=80		int:armor.general_protection_clothing=4500	index_color_1=4							
 item_jedi_robe_04_02	constitution_modified=50,strength_modified=80		int:armor.general_protection_clothing=4500	index_color_1=3							
