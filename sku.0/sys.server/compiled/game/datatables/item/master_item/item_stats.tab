@@ -1,6 +1,6 @@
 name	skill_mods	attribute_bonus	objvars	color	buff_name	cool_down_group	reuse_time	required_level_for_effect	hide_buff_identity	client_effect	client_animation
 s[unique]	s	s	s	s	s	s	i	i	i[0]	s	s
-item_holocron_06_01				index_color_1=2	holocron_1	holocron_1	600			appearance/pt_heal_resist_states.prt	survey
+item_holocron_06_01				index_color_1=2						appearance/pt_heal_resist_states.prt	survey
 item_holocron_06_02				index_color_1=10	holocron_2	holocron_2	3600			appearance/pt_heal_resist_states.prt	survey
 item_holocron_06_03				index_color_1=7	holocron_3	holocron_3	600			appearance/pt_heal_resist_states.prt	survey
 item_holocron_06_04				index_color_1=31	holocron_4	holocron_4	600			appearance/pt_heal_resist_states.prt	survey

@@ -2176,26 +2176,6 @@ public class combat_actions extends script.systems.combat.combat_base {
         return SCRIPT_CONTINUE;
     }
 
-    public int fs_one_with_force(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
-        target = self;
-        if (isIdValid(self))
-        {
-            if (pclib.resurrectPlayer(self))
-            {
-                sendSystemMessageTestingOnly(self, "Your strong connection to the Force has returned you from the brink of death");
-                pclib.clearCombatData(self);
-                buff.removeAllBuffs(self, true);
-                removeObjVar(self, "combat.intIncapacitationCount");
-                setPosture(self, POSTURE_UPRIGHT);
-                queueCommand(self, (-1465754503), self, "", COMMAND_PRIORITY_IMMEDIATE);
-                queueCommand(self, (-562996732), self, "", COMMAND_PRIORITY_IMMEDIATE);
-                play2dNonLoopingSound(self, "sound/music_acq_healer.snd");
-                utils.removeScriptVar(self, "pvp_death");
-            }
-        }
-        return SCRIPT_CONTINUE;
-    }
-
     public int fs_heal_1(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
         if (!healing.isDamaged(self)) {
             sendSystemMessage(self, new string_id("healing", "no_damage_to_heal_self"));
