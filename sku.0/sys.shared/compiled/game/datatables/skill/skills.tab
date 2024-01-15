@@ -1655,7 +1655,7 @@ expertise_fs_general_exacting_strikes_1	expertise																					expertise_
 expertise_fs_general_exacting_strikes_2	expertise_fs_general_exacting_strikes_1																					expertise_damage_line_fs_sweep=2,expertise_damage_line_fs_dm=2			0	
 expertise_fs_general_exacting_strikes_3	expertise_fs_general_exacting_strikes_2																					expertise_damage_line_fs_sweep=2,expertise_damage_line_fs_dm=2			0	
 expertise_fs_general_exacting_strikes_4	expertise_fs_general_exacting_strikes_3																					expertise_damage_line_fs_sweep=2,expertise_damage_line_fs_dm=2			0	
-expertise_fs_general_force_cloak_1	expertise																				fs_buff_invis_1				0	
+expertise_fs_general_force_cloak_1	expertise																				fs_buff_invis_1,fs_buff_invis_2				0	
 expertise_fs_general_heightened_speed_1	expertise																					expertise_movement_buff_fs_force_run=10			0	
 expertise_fs_general_heightened_speed_2	expertise_fs_general_heightened_speed_1																					expertise_movement_buff_fs_force_run=10			0	
 expertise_fs_general_heightened_speed_3	expertise_fs_general_heightened_speed_2																					expertise_movement_buff_fs_force_run=10			0	
