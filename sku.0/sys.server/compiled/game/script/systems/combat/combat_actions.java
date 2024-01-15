@@ -6494,6 +6494,13 @@ public class combat_actions extends script.systems.combat.combat_base {
         return SCRIPT_CONTINUE;
     }
 
+    public int fs_buff_invis_2(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
+        if (!stealth.canPerformForceCloak(self) || !combatStandardAction("fs_buff_invis_2", self, target, params, "", "")) {
+            return SCRIPT_OVERRIDE;
+        }
+        return SCRIPT_CONTINUE;
+    }
+
     public int steal(obj_id self, obj_id target, String params, float defaultTime) throws InterruptedException {
         if (!stealth.hasInvisibleBuff(self) && !buff.hasBuff(self, "sp_smoke_mirrors")) {
             return SCRIPT_OVERRIDE;
